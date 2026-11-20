@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mini-Foglio di Calcolo</title>
+  <meta name="theme-color" content="#198754">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-success px-2 py-1">
+    <span class="navbar-brand mb-0 h1 fs-6">▦ Mini-Foglio</span>
+    <div class="d-flex align-items-center gap-1">
+      <span id="netBadge" class="badge text-bg-warning d-none">offline</span>
+      <button id="btnInstall" class="btn btn-light btn-sm d-none">Installa</button>
+      <button id="btnCsv" class="btn btn-outline-light btn-sm">CSV</button>
+      <button id="btnClear" class="btn btn-outline-light btn-sm">Pulisci</button>
+    </div>
+  </nav>
+
+  <div class="px-2 py-1 bg-body-tertiary border-bottom">
+    <div class="input-group input-group-sm">
+      <span id="nameBox" class="input-group-text fw-semibold" style="min-width:4.2rem">A1</span>
+      <span class="input-group-text fst-italic fw-bold">fx</span>
+      <input id="formulaBar" class="form-control" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Barra della formula">
+    </div>
+  </div>
+
+  <div id="sheet">
+    <div id="corner"></div>
+    <div id="colHeaders"><div id="colHeadersInner"></div></div>
+    <div id="rowHeaders"><div id="rowHeadersInner"></div></div>
+    <div id="viewport" tabindex="0" aria-label="Griglia">
+      <div id="sizer"><div id="cells"></div></div>
+    </div>
+  </div>
+
+  <div id="status" class="small text-muted px-2 py-1 border-top">Pronto.</div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
